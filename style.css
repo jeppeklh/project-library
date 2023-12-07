@@ -1,0 +1,104 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color: rgb(39, 39, 39);
+    color: beige;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    background-color: black;
+    box-shadow: 5px 0 5px rgb(0, 0, 0, 0,5);
+}
+
+.login-button {
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.login-button:hover, .add-book-button:hover {
+    filter: brightness(90%);
+    cursor: pointer;
+}
+
+.main {
+    position: relative;
+}
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: beige;
+    text-align: center;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 0.2s ease-in-out;
+  }
+
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+
+  .modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: black;
+  }
+
+  .modal form h3 {
+    font-size: 25px;
+  }
+
+  .input {
+    border-radius: 5px;
+    border: 1px solid black;
+    height: 30px;
+    font-size: 20px;
+    padding: 5px;
+  }
+  
+
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: black;
+    font-size: 18px;
+    margin-top: auto;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.add-book-button {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.fa {
+    color: beige;
+}
