@@ -1,104 +1,154 @@
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    box-sizing: border-box;
-    background-color: rgb(39, 39, 39);
-    color: beige;
-    margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background-color: rgb(39, 39, 39);
+  color: beige;
+  margin: 0;
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 50px;
-    background-color: black;
-    box-shadow: 5px 0 5px rgb(0, 0, 0, 0,5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  background-color: black;
+  box-shadow: 5px 0 5px rgb(0, 0, 0, 0, 5);
 }
 
 .login-button {
-    border: none;
-    border-radius: 10px;
-    font-size: 20px;
-    padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 10px;
 }
 
-.login-button:hover, .add-book-button:hover {
-    filter: brightness(90%);
-    cursor: pointer;
+.login-button:hover,
+.add-book-button:hover,
+.modal form button:hover {
+  filter: brightness(90%);
+  cursor: pointer;
 }
 
 .main {
-    position: relative;
+  position: relative;
 }
 
 .modal {
-    position: fixed;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    width: 300px;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: beige;
-    text-align: center;
-    transform: translate(-50%, -50%) scale(0);
-    transition: 0.2s ease-in-out;
-  }
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: beige;
+  text-align: center;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 0.2s ease-in-out;
+}
 
-  .modal.active {
-    transform: translate(-50%, -50%) scale(1);
-  }
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
 
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: black;
+}
 
-  .modal form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    color: black;
-  }
+.modal form h3 {
+  font-size: 25px;
+}
 
-  .modal form h3 {
-    font-size: 25px;
-  }
-
-  .input {
-    border-radius: 5px;
-    border: 1px solid black;
-    height: 30px;
-    font-size: 20px;
-    padding: 5px;
-  }
-  
-
-
-.footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background-color: black;
-    font-size: 18px;
-    margin-top: auto;
+.modal form button {
+  height: 30px;
+  border-radius: 10px;
 }
 
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
 }
 
 .add-book-button {
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    font-size: 20px;
-    font-weight: bold;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 5px 5px 5px black;
+}
 
+.book-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  padding: 20px;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.book-card {
+  font-size: 20px;
+
+  background-color: beige;
+  color: black;
+  box-shadow: 2px 2px 2px black;
+  padding: 20px;
+  border-radius: 10px;
+  border: 3px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input {
+  border-radius: 5px;
+  border: 2px solid black;
+  height: 30px;
+  font-size: 20px;
+  padding: 5px;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.read-button {
+  font-size: 20px;
+  font-weight: bold;
+  width: 10em;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px black;
+}
+
+.read-button:hover {
+  filter: brightness(90%);
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: black;
+  font-size: 18px;
+  margin-top: auto;
 }
 
 .fa {
-    color: beige;
+  color: beige;
 }
